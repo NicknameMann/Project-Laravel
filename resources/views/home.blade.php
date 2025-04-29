@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ganti rujukan CSS -->
+  <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+
+  <style>
+    .hero {
+      min-height: 100vh;
+      background: url("{{ asset('wallpaper/homePage3.jpg') }}") no-repeat center center/cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-size: 100% 100%;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="hero">
+    <div class="navbar">
+      <div class="brand">SOBERS</div>
+      <div class="nav-links">
+        <a href="{{ url('home') }}" class="{{ Request::is('home') ? 'active' : '' }}">Beranda</a>
+        <a href="{{ url('katalog') }}" class="{{ Request::is('katalog') ? 'active' : '' }}">Katalog</a>
+        <a href="#">Service</a>
+        <a href="#">Tentang kami</a>
+        <a href="#">Booking</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1></h1>
+      <p></p>
+      <a href="#booking" class="btn">BOOK NOW</a>
+    </div>
+  </div>
+  
+  <div class="slider testimoni">
+    <img src="{{ asset('picture/sobers1.png') }}" class="active" alt="Gambar 1">
+    <img src="{{ asset('picture/sobers2.jpg') }}" alt="Gambar 2">
+    <!-- Tombol navigasi -->
+    <div class="nav-btn left">&#10094;</div>
+    <div class="nav-btn right">&#10095;</div>
+  </div>
+
+  <div class="pricelist">
+    <img src="{{ asset('picture/pricelist.jpg') }}" alt="Pricelist">
+  </div>
+    
+  <div class="slider comments">
+    <img src="{{ asset('picture/komen1.jpg') }}" class="active" alt="Gambar 1">
+    <img src="{{ asset('picture/komen2.jpg') }}" alt="Gambar 2">
+    <img src="{{ asset('picture/komen3.jpg') }}" alt="Gambar 3">
+    <img src="{{ asset('picture/komen4.jpg') }}" alt="Gambar 4">
+    <img src="{{ asset('picture/komen5.jpg') }}" alt="Gambar 5">
+    <!-- Tombol navigasi -->
+    <div class="nav-btn left">&#10094;</div>
+    <div class="nav-btn right">&#10095;</div>
+  </div>
+
+  <div class="end">
+    <img src="{{ asset('picture/homeakhir.jpg') }}" alt="end">
+  </div>
+
+  <div class="banner" style="position: relative;">
+    <a class="map-link" href="https://maps.app.goo.gl/hsPV89auhmcbL8Xo9" target="_blank">Klik Untuk Melihat Lokasi</a>
+  </div>
+
+  <footer>
+    <p>&copy; 
+      <script>document.write(new Date().getFullYear());</script>
+      SOBERS. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- Ganti rujukan ke file JS -->
+  <script src="{{ asset('js/script.js') }}"></script>
+</body>
+</html>
