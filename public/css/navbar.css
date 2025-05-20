@@ -1,0 +1,56 @@
+/* Reset dan Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+    
+    /* Navbar visible dan fixed di atas kaca tampilan */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  
+    /* Transisi untuk properti transform */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transform: translateY(0); /* Awalnya navbar muncul penuh */
+    }
+    
+  .navbar.hidden {
+    transform: translateY(-100%);
+  }
+
+  .navbar a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .navbar a:hover {
+    color: #f25f5c;
+  }
+  .brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a.active {
+    color: #f25f5c; /* Misal: blue yang menonjol */
+    font-weight: bold;
+  }

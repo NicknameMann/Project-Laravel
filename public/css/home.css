@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   body, html {
     font-family: 'Segoe UI', sans-serif;
   }
@@ -101,9 +102,71 @@
   footer {
     background-color: #111;
     color: white;
-    padding: 20px 0;
+    padding: 40px 20px;
     text-align: center;
+    position: relative; /* Penting agar absolute positioning bekerja */
   }
+  
+  /* Kontainer ikon sosmed */
+  .social-icons {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Gambar ikon */
+  .sosmed-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 40%;
+    transition: transform 0.2s ease;
+  }
+  
+  .sosmed-icon:hover {
+    transform: scale(1.1);
+  }  
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .logo-container img {
+    width: 500px;
+    max-width: 200%;
+    height: auto;
+    margin-bottom: 50px;
+    box-shadow: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo-container h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Animasi fade-in saat halaman dimuat */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   @media (max-width: 768px) {
     .navbar {
       flex-direction: column;
@@ -137,35 +200,20 @@
 
   .map-link {
     position: absolute;
-    bottom: 60px;  /* Jarak dari bawah container */
-    right: 180px;   /* Jarak dari sisi kanan container */
+    bottom: 20px;  /* Jarak dari bawah container */
+    right: 350px;   /* Jarak dari sisi kanan container */
     border-radius: 50%; 
     display: flex; 
     align-items: center; 
     justify-content: center;
     color: #007BFF;
     text-decoration: none; 
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .map-link:hover {
     color: #0056b3;    /* Warna berbeda ketika cursor menyentuh link */
     text-decoration: underline;   /* Tampilkan garis bawah saat dihover */
-  }
-
-  .end {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: auto;
-    flex-direction: column;
-  }
-  
-  .end img {
-    width: 1521px; /* Sesuaikan ukuran */
-    height: 750px;
-    border-radius: 0px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
 /* Styling dasar untuk semua slider */
@@ -216,8 +264,8 @@
 /* Slider Comments */
 
 .comments {
-  width: 1400px;
-  height: 700px;
+  width: 1000px;
+  height: 450px;
 }
 
 /* Jika ingin mengubah tampilan tombol navigasi khusus untuk slider-comments */

@@ -1,0 +1,374 @@
+/* Reset dan Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("/wallpaper/background.jpg"); /* Sesuaikan path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Gelap transparan */
+  z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.navbar a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #f25f5c;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-links a.active {
+    color: #f25f5c;
+    font-weight: bold;
+}
+
+ /* Animasi fade-in saat halaman dimuat */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    padding: none;
+   
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+/* Error Messages */
+.error-messages {
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Form Table */
+form {
+    margin: 30px auto;
+    width: 90%;
+}
+
+form table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+form table td {
+    padding: 10px;
+}
+
+form table td:first-child {
+    text-align: right;
+    width: 30%;
+}
+
+/* Form Elements */
+input[type="text"],
+input[type="datetime-local"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.booking-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+.form-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #333;
+}
+
+
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.btn-submit,
+.btn-view {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit {
+  background-color: #f25f5c;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #d94441;
+}
+
+.btn-view {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn-view:hover {
+  background-color: #aaa;
+}
+
+
+.form-button {
+    text-align: center;
+}
+
+/* View Bookings Button */
+.view-bookings {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Notification */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.notification {
+    background-color: #ccc;
+    color: #333;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    opacity: 1;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.notification.error {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.notification.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Buat kursor select dan datetime-local jadi pointer */
+select {
+  cursor: pointer;
+}
+
+/* Tambahkan efek hover pada select */
+select:hover,
+input[type="datetime-local"]:hover {
+  background-color: #f0f0f0;
+  border-color: #999;
+}
+
+/* Jika ingin option juga disesuaikan (hanya pada browser tertentu) */
+option {
+  cursor: pointer;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative; /* Penting agar absolute positioning bekerja */
+    clear: both; /* Membersihkan float jika ada elemen di atasnya yang difloat */
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* Kontainer ikon sosmed */
+  .social-icons {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Gambar ikon */
+  .sosmed-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 40%;
+    transition: transform 0.2s ease;
+  }
+  
+  .sosmed-icon:hover {
+    transform: scale(1.1);
+  }  
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .logo-container img {
+    width: 500px;
+    max-width: 200%;
+    height: auto;
+    margin-bottom: 50px;
+    box-shadow: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo-container h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Animasi fade-in saat halaman dimuat */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
