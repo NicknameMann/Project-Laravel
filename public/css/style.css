@@ -1,13 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: rgba(255, 218, 163, 0.815)olate;
     margin: 0;
     padding: 20px;
+    background-color: rgba(255, 237, 211, 0.961);
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
+    background-color: rgba(255, 237, 211, 0.961);
 }
 
 h1 {
@@ -16,7 +17,7 @@ h1 {
 }
 
 .btn-kembali {
-    background-color: #4CAF50;
+    background-color:#af904c;
     color: white;
     padding: 10px 18px;
     text-decoration: none;
@@ -44,14 +45,14 @@ h1 {
 }
 
 .data-table th {
-    background-color: #4CAF50;
+    background-color: #af904c;
     color: white;
     padding: 10px;
     text-align: left;
 }
 
 .data-table td {
-    border: 1px solid #ddd;
+    border: 1px solid #915a2d;
     padding: 10px;
 }
 
