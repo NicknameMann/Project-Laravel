@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="{{ route('bookings.create') }}" class="btn-kembali">Buat Booking Baru</a>
+        <a href="{{ route('bookings.create') }}" class="btn-kembali">Kembali</a>
 
         <h1>Daftar Booking</h1>
 
@@ -57,7 +57,6 @@
             </table>
         @endif
     </div>
-
     <script src="{{ asset('js/daftar.js') }}"></script>
 </body>
 </html>

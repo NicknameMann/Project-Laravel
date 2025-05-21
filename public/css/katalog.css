@@ -2,107 +2,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  body, html {
-    font-family: 'Segoe UI', sans-serif;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
-    background-color: rgba(0, 0, 0, 0.5);
-    flex-wrap: wrap;
+}
+body,
+html {
+    font-family: "Segoe UI", sans-serif;
+}
 
-    /* Navbar visible dan fixed di atas kaca tampilan */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  
-    /* Transisi untuk properti transform */
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    transform: translateY(0); /* Awalnya navbar muncul penuh */
-    }
-    
-  .navbar.hidden {
-    transform: translateY(-100%);
-  }
-
-  .navbar a {
-    color: white;
-    margin-left: 25px;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .navbar a:hover {
-    color: #f25f5c;
-  }
-  .brand {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .nav-links a.active {
-    color: #f25f5c; /* Misal: blue yang menonjol */
-    font-weight: bold;
-  }
-
-  .content {
+.content {
     text-align: center;
     padding: 100px 20px 60px;
-  }
-  .content h1 {
+}
+.content h1 {
     font-size: 48px;
     margin-bottom: 20px;
-  }
-  .content p {
+}
+.content p {
     font-size: 18px;
     max-width: 600px;
     margin: 0 auto 30px;
     line-height: 1.5;
-  }
-  footer {
-    background-color: #111;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-    position: relative; /* Penting agar absolute positioning bekerja */
-  }
-  
-  /* Kontainer ikon sosmed */
-  .social-icons {
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    display: flex;
-    gap: 20px;
-  }
-  
-  /* Gambar ikon */
-  .sosmed-icon {
-    height: 60px;
-    width: 60px;
-    border-radius: 40%;
-    transition: transform 0.2s ease;
-  }
-  
-  .sosmed-icon:hover {
+}
+
+
+.sosmed-icon:hover {
     transform: scale(1.1);
-  }  
-  
-  .logo-container {
+}
+
+.logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     animation: fadeIn 1.5s ease-in-out;
-  }
-  
-  .logo-container img {
+}
+
+.logo-container img {
     width: 500px;
     max-width: 200%;
     height: auto;
@@ -110,85 +43,26 @@
     box-shadow: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
-  }
-  
-  .logo-container img:hover {
+}
+
+.logo-container img:hover {
     transform: scale(1.05);
-  }
-  
-  .logo-container h2 {
+}
+
+.logo-container h2 {
     font-size: 50px;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Animasi fade-in saat halaman dimuat */
-  @keyframes fadeIn {
+}
+
+/* Animasi fade-in saat halaman dimuat */
+@keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translateY(-20px);
+        opacity: 0;
+        transform: translateY(-20px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  
-  .katalog {
-    display: flex;
-    flex-direction: column; /* Susun secara vertikal */
-    align-items: center;    /* Center-kan gambar secara horizontal */
-    gap: 20px;              /* Jarak antara gambar */
-  }
-  
-  .katalog img {
-    width: 1500px; /* Sesuaikan ukuran */
-    height: 750px;
-    border-radius: 8px; /* Opsi: beri efek sudut membulat */
-  }
-  .map-link {
-    position: absolute;
-    bottom: 60px;  /* Jarak dari bawah container */
-    right: 180px;   /* Jarak dari sisi kanan container */
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    color: #007BFF;
-    text-decoration: none; 
-    font-size: 30px;
-  }
-
-  .map-link:hover {
-    color: #0056b3;    /* Warna berbeda ketika cursor menyentuh link */
-    text-decoration: underline;   /* Tampilkan garis bawah saat dihover */
-  }
-  
-
-  .end {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: auto;
-    flex-direction: column;
-  }
-  
-  .end img {
-    width: 1521px; /* Sesuaikan ukuran */
-    height: 750px;
-    border-radius: 0px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  .katalog {
-    display: flex;
-    flex-direction: column; /* Susun secara vertikal */
-    align-items: center;    /* Center-kan gambar secara horizontal */
-    gap: 20px;              /* Jarak antara gambar */
-  }
-  
-  .katalog img {
-    width: 1500px; /* Sesuaikan ukuran */
-    height: 750px;
-    border-radius: 8px; /* Opsi: beri efek sudut membulat */
-  }
+}

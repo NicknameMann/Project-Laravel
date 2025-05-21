@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff;
+    background-color: rgba(255, 218, 163, 0.815)olate;
     margin: 0;
     padding: 20px;
 }
@@ -67,4 +67,124 @@ h1 {
 
 .btn-aksi.btn-danger {
     background-color: #f44336;
+}
+.social-icons {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.sosmed-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 40%;
+    transition: transform 0.2s ease;
+}
+
+.sosmed-icon:hover {
+    transform: scale(1.1);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo-container img {
+    width: 500px;
+    max-width: 200%;
+    height: auto;
+    margin-bottom: 50px;
+    box-shadow: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
+}
+
+.logo-container h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .data-table th, .data-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btn-kembali {
+        padding: 8px 16px;
+    }
+
+    .btn-aksi {
+        padding: 5px 10px;
+    }
+
+    .logo-container h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .data-table {
+        font-size: 12px;
+    }
+
+    .data-table th, .data-table td {
+        padding: 6px;
+    }
+
+    .btn-kembali {
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-aksi {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        position: static;
+        margin-top: 20px;
+    }
+
+    .sosmed-icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .logo-container img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .logo-container h2 {
+        font-size: 28px;
+    }
 }

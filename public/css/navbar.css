@@ -1,56 +1,101 @@
-/* Reset dan Global Styles */
+/* public/css/navbar.css */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    font-family: 'Segoe UI', sans-serif;
+body,
+html {
+    font-family: "Segoe UI", sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 60px;
-    background-color: rgba(0, 0, 0, 0.5);
-    flex-wrap: wrap;
-    
-    /* Navbar visible dan fixed di atas kaca tampilan */
+    background-color: #574c44;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-  
-    /* Transisi untuk properti transform */
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    transform: translateY(0); /* Awalnya navbar muncul penuh */
-    }
-    
-  .navbar.hidden {
-    transform: translateY(-100%);
-  }
+    transform: translateY(0);
+}
 
-  .navbar a {
-    color: white;
-    margin-left: 25px;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .navbar a:hover {
-    color: #f25f5c;
-  }
-  .brand {
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.brand {
     font-size: 24px;
     font-weight: bold;
-  }
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-  }
+    color: white;
+}
 
-  .nav-links a.active {
-    color: #f25f5c; /* Misal: blue yang menonjol */
-    font-weight: bold;
-  }
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffd700;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .brand {
+        margin-right: auto; 
+        font-size: 20px;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: auto;
+        position: relative;
+        top: 0;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #5c4033;
+        margin-top: 5px;
+        padding: 10px 20px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 8px 0;
+    }
+}

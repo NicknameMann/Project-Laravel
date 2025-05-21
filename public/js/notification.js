@@ -1,3 +1,5 @@
+notification.js
+
 document.addEventListener("DOMContentLoaded", function () {
   // Jika ada element notifikasi statis (misalnya dari session), biarkan ia fade out setelah beberapa detik.
   const staticNotif = document.getElementById("notification");

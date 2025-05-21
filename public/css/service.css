@@ -1,113 +1,71 @@
+/* General Styles */
 * {
-    box-sizing: border-box;
-  }
-  body, html {
-    font-family: 'Segoe UI', sans-serif;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
-    background-color: rgba(0, 0, 0, 0.5);
-    flex-wrap: wrap;
-
-    /* Navbar visible dan fixed di atas kaca tampilan */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  
-    /* Transisi untuk properti transform */
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    transform: translateY(0); /* Awalnya navbar muncul penuh */
-    }
-    
-  .navbar.hidden {
-    transform: translateY(-100%);
-  }
-
-  .navbar a {
-    color: white;
-    margin-left: 25px;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .navbar a:hover {
-    color: #f25f5c;
-  }
-  .brand {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .nav-links a.active {
-    color: #f25f5c; /* Misal: blue yang menonjol */
-    font-weight: bold;
-  }
-
-  .content {
-    text-align: center;
-    padding: 100px 20px 60px;
-  }
-  .content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  .content p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 30px;
-    line-height: 1.5;
-  }
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f6f1e9;
-    color: #333;
+  box-sizing: border-box;
 }
 
+body, html {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6f1e9;
+  color: #333;
+}
+
+/* Hero Section */
 .hero {
-    background-color: #eee0c9;
-    padding: 60px 20px;
-    text-align: center;
+  background-color: #d6a961;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 18px;
-    color: #666;
+  font-size: 18px;
+  color: #666;
 }
 
+/* Content Section */
+.content {
+  text-align: center;
+  padding: 100px 20px 60px;
+}
+
+.content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.5;
+}
+
+/* Services Section */
 .services {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  gap: 20px;
 }
 
 .service-card {
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 300px;
-    text-align: center;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
 }
 
 .service-card h3 {
-    color: #3e2c19;
-    margin-bottom: 10px;
+  color: #3e2c19;
+  margin-bottom: 10px;
 }
 
 .service {
@@ -117,6 +75,7 @@ body {
   margin-bottom: 10px;
 }
 
+/* Service Feature Section */
 .service-feature {
   display: flex;
   align-items: center;
@@ -124,7 +83,7 @@ body {
   padding: 40px 20px;
   max-width: 1200px;
   margin: 40px auto;
-  flex-wrap: wrap; /* Agar tampil responsif pada layar kecil */
+  flex-wrap: wrap;
 }
 
 .service-feature-text {
@@ -144,12 +103,11 @@ body {
   line-height: 1.5;
 }
 
-/* Kelas tambahan untuk membalik layout (gambar di kiri, teks di kanan) */
 .service-feature.alternate {
   flex-direction: row-reverse;
 }
 
-/* Container utama untuk section zigzag */
+/* Zigzag Section */
 .zigzag-section {
   display: flex;
   flex-direction: column;
@@ -159,7 +117,6 @@ body {
   margin: auto;
 }
 
-/* Setiap item zigzag disusun dengan flex, responsif dengan flex-wrap */
 .zigzag-item {
   display: flex;
   align-items: center;
@@ -167,15 +124,14 @@ body {
   flex-wrap: wrap;
 }
 
-/* Kelas alternate membalik urutan kolom untuk efek zigzag */
 .zigzag-item.alternate {
   flex-direction: row-reverse;
 }
 
-/* Pengaturan gambar */
 .zigzag-image {
   flex: 1;
 }
+
 .zigzag-image img {
   width: 100%;
   max-width: 500px;
@@ -183,114 +139,20 @@ body {
   display: block;
 }
 
-/* Pengaturan teks */
 .zigzag-text {
   flex: 1;
   max-width: 600px;
   padding: 0 20px;
   text-align: justify;
-  /* Jika ingin menengahkan teks secara horizontal:
-     text-align: center;
-  */
 }
 
-/* Responsif: untuk layar kecil, kolom ditumpuk */
-@media (max-width: 768px) {
-  .zigzag-item {
-    flex-direction: column;
-    text-align: center;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  .zigzag-item.alternate {
-    flex-direction: column;
-  }
-  .zigzag-text {
-    padding: 20px 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-footer {
-    background-color: #111;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-    position: relative; /* Penting agar absolute positioning bekerja */
-  }
-  
-  /* Kontainer ikon sosmed */
-  .social-icons {
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    display: flex;
-    gap: 20px;
-  }
-  
-  /* Gambar ikon */
-  .sosmed-icon {
-    height: 60px;
-    width: 60px;
-    border-radius: 40%;
-    transition: transform 0.2s ease;
-  }
-  
-  .sosmed-icon:hover {
-    transform: scale(1.1);
-  }  
-  
-  .logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: fadeIn 1.5s ease-in-out;
-  }
-  
- .logo-container img {
-    width: 500px;
-    max-width: 200%;
-    height: auto;
-    margin-bottom: 50px;
-    box-shadow: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .logo-container img:hover {
-    transform: scale(1.05);
-  }
-  
-  .logo-container h2 {
-    font-size: 50px;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Animasi fade-in saat halaman dimuat */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-
-  .map-link {
-    position: absolute;
-    bottom: 60px;  /* Jarak dari bawah container */
-    right: 180px;   /* Jarak dari sisi kanan container */
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    color: #007BFF;
-    text-decoration: none; 
-    font-size: 30px;
-  }
-
-  .map-link:hover {
-    color: #0056b3;    /* Warna berbeda ketika cursor menyentuh link */
-    text-decoration: underline;   /* Tampilkan garis bawah saat dihover */
-  }

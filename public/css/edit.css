@@ -32,60 +32,6 @@ body::after {
   z-index: -1;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
-    background-color: rgba(0, 0, 0, 0.5);
-    flex-wrap: wrap;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    transform: translateY(0);
-}
-
-.navbar a {
-    color: white;
-    margin-left: 25px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.navbar a:hover {
-    color: #f25f5c;
-}
-
-.brand {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.nav-links a.active {
-    color: #f25f5c;
-    font-weight: bold;
-}
-
- /* Animasi fade-in saat halaman dimuat */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
 /* Hero Section */
 .hero {
     min-height: 100vh;
